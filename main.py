@@ -44,9 +44,20 @@ for i in tablica_bez_spac:
     else:
         tablica_bez_sla.append(split)
 
-print(bledy_z_sla)
-print(tablica_bez_sla)
+#print(bledy_z_sla)
+#print(tablica_bez_sla)
 
+bledy_z_mysli = []
+tablica_bez_mysli = []
+for i in tablica_bez_sla:
+    split = i[0].split('-')
+    if len(split) != 2:
+        bledy_z_mysli.append(i)
+    else:
+        tablica_bez_mysli.append(i)
+
+print(bledy_z_mysli)
+print(tablica_bez_mysli)
 
 
 
