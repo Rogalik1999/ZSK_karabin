@@ -1,22 +1,40 @@
-f = open('C:\studia\semestr V\zinformatyzowane systemy katastralne\Kontury_eksport_dz.txt')
+f = open('Kontury_eksport_dz.txt')
 
 bledy = []
+i =0
+x = None
 
-tab = []
-for linie in f:
-    e = linie.split()
-    if 0 < len(e) < 7 and (len(e) !=1 or len(e[0])>2):  #poprawic troche warunek, zeby nie bylo 138
-      #  print(e[0:2])
-        tab.append(e)
+tablica =[]
+for line in f:
+    fields = line.split()
+    if i ==0:
+        if len(fields)==0:
+            continue
+        tablica.append(fields)
+        i = i +1
+    elif i ==1:
+        i = i+1
+    elif i ==2:
+        i = i+1
+        x = int(fields[0])
+    else:
+        if x == 0:
+            i = 0
+        else:
+            x = x -1
 
-for i in range(len(tab)):
+print(tablica)
+
+
+
+#for i in range(len(tab)):
     #print(tab[i][0])
-    if ('-') in tab[i][0]:
-        bledy.append(3)
+    #if ('-') in tab[i][0]:
+       # bledy.append(3)
     #    print(' ')
         #print((tab[i][0]).index('-'))
  #       print('ok')
-    else:
+   # else:
    #     print('blad')
-         print(tab[i])
+         #print(tab[i])
      #   bledy.append(tab[i])
