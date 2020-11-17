@@ -1,3 +1,3 @@
 print('fff')
 
-print('kakasx')
+print('oooo')
