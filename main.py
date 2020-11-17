@@ -1,4 +1,4 @@
-f = open('C:\studia\semestr V\zinformatyzowane systemy katastralne\Kontury_eksport_dz.txt')
+f = open('Kontury_eksport_dz.txt')
 
 bledy = []
 
