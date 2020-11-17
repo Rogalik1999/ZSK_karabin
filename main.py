@@ -1,10 +1,10 @@
 f = open('Kontury_eksport_dz.txt')
 
 bledy = []
-i =0
+i = 0
 x = None
 
-tablica =[]
+tablica = []
 for line in f:
     fields = line.split()
     if i ==0:
@@ -23,18 +23,14 @@ for line in f:
         else:
             x = x -1
 
-print(tablica)
+bledy_spacje = []
+tablica_bez_spac = []
+j = 0
+for i in tablica:
+    if len(i) != 1:
+        bledy_spacje.append(i)
+    else:
+        tablica_bez_spac.append(i)
 
-
-
-#for i in range(len(tab)):
-    #print(tab[i][0])
-    #if ('-') in tab[i][0]:
-       # bledy.append(3)
-    #    print(' ')
-        #print((tab[i][0]).index('-'))
- #       print('ok')
-   # else:
-   #     print('blad')
-         #print(tab[i])
-     #   bledy.append(tab[i])
+print(bledy_spacje)
+print(tablica_bez_spac)
