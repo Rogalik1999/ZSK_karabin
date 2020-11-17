@@ -32,5 +32,22 @@ for i in tablica:
     else:
         tablica_bez_spac.append(i)
 
-print(bledy_spacje)
-print(tablica_bez_spac)
+#print(bledy_spacje)
+#print(tablica_bez_spac)
+
+bledy_z_sla = []
+tablica_bez_sla = []
+for i in tablica_bez_spac:
+    split = i[0].split('/')
+    if len(split) > 2:
+        bledy_z_sla.append(split)
+    else:
+        tablica_bez_sla.append(split)
+
+print(bledy_z_sla)
+print(tablica_bez_sla)
+
+
+
+
+
